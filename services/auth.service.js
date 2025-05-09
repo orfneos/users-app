@@ -23,7 +23,7 @@ function verifyAccessToken(token) {
   try {
     const payload = jwt.verify(token, secret);
 
-    console.log('VerifyToken', payload);
+    // console.log('VerifyToken', payload);
     return {verified: true, data: payload}
   } catch (err) {
     return {verified: false, data: err.message}
